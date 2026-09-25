@@ -1,0 +1,994 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background: #f5f5f5;
+
+    color: #111;
+}
+
+
+button {
+    border: none;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: 700;
+}
+
+
+.logo span {
+
+    color: #7651dc;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+nav a:hover {
+
+    color: #7651dc;
+}
+
+
+.icons {
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.icons button {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   MAIN BENTO GRID
+========================================= */
+
+.bento {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto 70px;
+
+
+    display: grid;
+
+
+    /* Same 3-column structure */
+
+    grid-template-columns:
+        220px
+        465px
+        220px;
+
+
+    /* Same row structure */
+
+    grid-template-rows:
+        277px
+        210px
+        211px;
+
+
+    gap: 26px;
+
+
+    /* EXACT CARD POSITIONING */
+
+    grid-template-areas:
+
+        "outfit hero wardrobe"
+
+        "style wardrobe-small wardrobe"
+
+        "style stats growth";
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.card {
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    padding: 25px;
+}
+
+
+/* =========================================
+   TOP LEFT
+========================================= */
+
+.outfit-card {
+
+    grid-area: outfit;
+
+    background: #f9eee2;
+}
+
+
+.small-text {
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.outfit-card h2 {
+
+    font-size: 30px;
+
+    line-height: 0.95;
+
+    margin-top: 18px;
+
+    letter-spacing: -1px;
+}
+
+
+.outfit-card h2 span {
+
+    color: #7651dc;
+
+    font-style: italic;
+}
+
+
+.yellow-button {
+
+    margin-top: 25px;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    background: #ffd166;
+
+    font-weight: 600;
+
+    font-size: 11px;
+}
+
+
+.arrow {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    right: 25px;
+
+    font-size: 28px;
+}
+
+
+/* =========================================
+   MAIN HERO
+========================================= */
+
+.hero-card {
+
+    grid-area: hero;
+
+    background: #7651dc;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 45px;
+}
+
+
+.hero-card h1 {
+
+    font-size: 60px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    margin-top: 15px;
+}
+
+
+.hero-card h1 i {
+
+    font-weight: 400;
+}
+
+
+.hero-card h1 span {
+
+    color: #ffd166;
+}
+
+
+.stars {
+
+    color: #ffd166;
+
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    letter-spacing: 4px;
+}
+
+
+.reviews {
+
+    font-size: 11px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   RIGHT TALL CARD
+========================================= */
+
+.wardrobe-card {
+
+    grid-area: wardrobe;
+
+    background: #ded3ff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.wardrobe-card h2 {
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    margin-top: 12px;
+}
+
+
+.wardrobe-image {
+
+    height: 150px;
+
+    background: #c6b7f5;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.hanger {
+
+    font-size: 70px;
+}
+
+
+.description {
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.purple-button {
+
+    background: #7651dc;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   LEFT STYLE CARD
+========================================= */
+
+.style-card {
+
+    grid-area: style;
+
+    background: #ffd166;
+
+    padding: 25px;
+}
+
+
+.style-card h2 {
+
+    font-size: 31px;
+
+    line-height: 0.95;
+
+    margin-top: 12px;
+}
+
+
+.style-card h2 span {
+
+    color: #7651dc;
+}
+
+
+.clothing-list {
+
+    margin-top: 35px;
+}
+
+
+.clothing-list div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+
+.clothing-list span {
+
+    font-size: 10px;
+}
+
+
+.clothing-list p {
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SMALL WHITE CARD
+========================================= */
+
+.wardrobe-small {
+
+    grid-area: wardrobe-small;
+
+    background: white;
+}
+
+
+.mini-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.avatar {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #f1eaff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 20px;
+}
+
+
+.mini-profile strong {
+
+    display: block;
+
+    font-size: 11px;
+}
+
+
+.mini-profile small {
+
+    display: block;
+
+    font-size: 8px;
+
+    color: #888;
+}
+
+
+.wardrobe-small h2 {
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    margin-top: 25px;
+}
+
+
+.style-tags {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 15px;
+}
+
+
+.style-tags span {
+
+    background: #f0ebff;
+
+    color: #7651dc;
+
+    padding: 5px 9px;
+
+    border-radius: 15px;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   YELLOW CENTER CARD
+========================================= */
+
+.consistency-card {
+
+    background: #ffd166;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.consistency-card p {
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.consistency-card h2 {
+
+    font-size: 25px;
+
+    line-height: 0.95;
+}
+
+
+.clothes-row {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.clothes-row span {
+
+    width: 35px;
+
+    height: 35px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   STATISTICS CARD
+========================================= */
+
+.stats-card {
+
+    grid-area: stats;
+
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.stat-number {
+
+    font-size: 52px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.stats-card > p {
+
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+
+
+.faces {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    gap: -5px;
+}
+
+
+.faces span {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #f0ebff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   LARGE BOTTOM PURPLE CARD
+========================================= */
+
+.growth-card {
+
+    grid-area: growth;
+
+    background: #7651dc;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 30px;
+}
+
+
+.growth-chart {
+
+    width: 190px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 10px;
+}
+
+
+.bar {
+
+    width: 22px;
+
+    background: #a995ed;
+
+    border-radius: 12px 12px 0 0;
+}
+
+
+.bar1 {
+    height: 30px;
+}
+
+
+.bar2 {
+    height: 50px;
+}
+
+
+.bar3 {
+    height: 65px;
+}
+
+
+.bar4 {
+    height: 85px;
+}
+
+
+.bar5 {
+    height: 100px;
+}
+
+
+.growth-text h2 {
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+
+.growth-text p {
+
+    margin-top: 15px;
+
+    font-size: 11px;
+
+    color: #e7e0ff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #1e1b22;
+
+    color: white;
+
+    padding: 40px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+footer h2 span {
+
+    color: #7651dc;
+}
+
+
+footer p {
+
+    font-size: 11px;
+
+    color: #aaa;
+
+    margin-top: 5px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .bento {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        grid-template-rows:
+            300px
+            220px
+            220px
+            220px;
+
+        grid-template-areas:
+
+            "hero hero"
+
+            "outfit wardrobe"
+
+            "style wardrobe-small"
+
+            "stats growth";
+    }
+
+    .consistency-card {
+
+        display: none;
+    }
+
+    nav {
+
+        display: none;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+
+    /* HEADER */
+
+    .header {
+
+        width: 92%;
+
+        margin: 15px auto;
+    }
+
+
+    nav {
+
+        display: none;
+    }
+
+
+    .icons button {
+
+        width: 30px;
+
+        height: 30px;
+    }
+
+
+    /* BENTO */
+
+    .bento {
+
+        width: 92%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        margin-top: 20px;
+    }
+
+
+    /* HERO */
+
+    .hero-card {
+
+        min-height: 330px;
+
+        padding: 30px;
+    }
+
+
+    .hero-card h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    /* ALL OTHER CARDS */
+
+    .outfit-card {
+
+        min-height: 300px;
+    }
+
+
+    .wardrobe-small {
+
+        min-height: 200px;
+    }
+
+
+    .consistency-card {
+
+        display: flex;
+
+        min-height: 210px;
+    }
+
+
+    .wardrobe-card {
+
+        min-height: 430px;
+    }
+
+
+    .style-card {
+
+        min-height: 380px;
+    }
+
+
+    .stats-card {
+
+        min-height: 190px;
+    }
+
+
+    .growth-card {
+
+        min-height: 230px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+
+    .growth-chart {
+
+        width: 100%;
+
+        height: 70px;
+    }
+
+
+    .growth-text h2 {
+
+        font-size: 27px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+}
